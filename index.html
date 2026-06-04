@@ -549,6 +549,10 @@
             position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;
         }
         .project-img-inner { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 0; }
+        .pdf-thumb {
+            width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+            background: linear-gradient(135deg, #1e1a2a, #0f0f1a); font-size: 3rem;
+        }
         .video-thumb-wrapper {
             width: 100%; height: 100%; background: linear-gradient(135deg, #2e1a1a, #1e1a3e);
             display: flex; align-items: center; justify-content: center; position: relative;
@@ -676,6 +680,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="hamburger" id="hamburger" onclick="toggleMenu()">
@@ -701,7 +706,7 @@
             <div class="particle" style="top:20%; left:70%;"></div>
             <div class="image-frame">
                 <div class="image-placeholder"></div>
-                <img src="ME.png" alt="Kenshie C. Maling" class="hero-portrait" onerror="this.style.display='none'; this.parentElement.querySelector('.image-placeholder').innerHTML='<div class=\"silhouette-fallback\" style=\"display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:100%;\"><div class=\"silhouette\" style=\"width:55%; aspect-ratio:1/1.4; background:linear-gradient(180deg, rgba(217,79,213,.25), rgba(56,232,245,.15)); border-radius:50% 50% 40% 40%; box-shadow:0 0 40px rgba(217,79,213,.2);\"></div><span class=\"placeholder-label\"></span></div>
+                <img src="ME.png" alt="Kenshie C. Maling" class="hero-portrait" onerror="this.style.display='none'; this.parentElement.querySelector('.image-placeholder').innerHTML='<div class=\"silhouette-fallback\" style=\"display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:100%;\"><div class=\"silhouette\" style=\"width:55%; aspect-ratio:1/1.4; background:linear-gradient(180deg, rgba(217,79,213,.25), rgba(56,232,245,.15)); border-radius:50% 50% 40% 40%; box-shadow:0 0 40px rgba(217,79,213,.2);\"></div><span class=\"placeholder-label\"></span></div>">
             </div>
         </div>
         <div class="scroll-cue">
@@ -757,7 +762,7 @@
         <h2 class="section-title reveal">Designing Projects</h2>
         <div class="projects-grid">
             <div class="project-card reveal" onclick="openLightbox('SunMoon.png', 'Sun & Moon Illustration')"><div class="project-img"><img src="SunMoon.png" class="project-img-inner" onerror="this.style.background='linear-gradient(135deg, #2a1a3e, #1a2e3e)'; this.alt='🌙';"><div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div></div><div class="project-info"><div class="project-type">Illustration Design</div><div class="project-title">Sun & Moon Illustration</div><div class="project-year">Layout 2022</div></div></div>
-             <div class="project-card reveal" onclick="openLightbox('poster.jpg', 'Poultrymate Poster')"><div class="project-img"><img src="poster.jpg" class="project-img-inner" onerror="this.style.background='linear-gradient(135deg, #2a1a3e, #1a2e3e)'; this.alt='🌙';"><div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div></div><div class="project-info"><div class="project-type">Poster Design</div><div class="project-title">Poultrymate Manuscript Poster</div><div class="project-year">Layout 2022</div></div></div>
+             <div class="project-card reveal" onclick="openLightbox('poster.png', 'Poultrymate Poster')"><div class="project-img"><img src="poster.png" class="project-img-inner" onerror="this.style.background='linear-gradient(135deg, #2a1a3e, #1a2e3e)'; this.alt='🌙';"><div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div></div><div class="project-info"><div class="project-type">Poster Design</div><div class="project-title">Poultrymate Manuscript Poster</div><div class="project-year">Layout 2022</div></div></div>
             <div class="project-card reveal" onclick="openLightbox('Medilink.png', 'MediLink Advertisement')"><div class="project-img"><img src="Medilink.png" class="project-img-inner" onerror="this.alt='💊';"><div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div></div><div class="project-info"><div class="project-type">Poster Design</div><div class="project-title">MediLink Advertisement</div><div class="project-year">Layout 2024</div></div></div>
             <div class="project-card reveal" onclick="openLightbox('Usermanual.png', 'PoultryMate User Manual')"><div class="project-img"><img src="Usermanual.png" class="project-img-inner" onerror="this.alt='📄';"><div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div></div><div class="project-info"><div class="project-type">Poster Design</div><div class="project-title">PoultryMate User Manual</div><div class="project-year">Layout 2025</div></div></div>
             <div class="project-card reveal" onclick="openLightbox('Medilinklogo.png', 'MediLink Logo')"><div class="project-img"><img src="Medilinklogo.png" class="project-img-inner" onerror="this.alt='⚕️';"><div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div></div><div class="project-info"><div class="project-type">Logo Design</div><div class="project-title">MediLink Logo</div><div class="project-year">Layout 2024</div></div></div>
@@ -767,26 +772,143 @@
             <div class="project-card reveal" onclick="openLightbox('Vido.mp4', 'Nearby Wokrs — Start Up Ad', true)"><div class="project-img"><div class="video-thumb-wrapper"><video src="Vido.mp4" muted preload="metadata" style="width:100%;height:100%;object-fit:cover;" onloadedmetadata="this.currentTime=1;" onerror="this.style.display='none'; this.parentElement.querySelector('.video-play-btn').style.display='flex';"></video><div class="video-play-btn">▶</div></div><div class="project-overlay"><span class="project-overlay-tag">Click to Play</span></div></div><div class="project-info"><div class="project-type">Video Editing</div><div class="project-title">Nearby Wokrs — Start Up Ad</div><div class="project-year">Portfolio 2024</div></div></div>
              <div class="project-card reveal" onclick="openLightbox('Promvid.mp4', 'Medilink — Promotional Video', true)"><div class="project-img"><div class="video-thumb-wrapper"><video src="Promvid.mp4" muted preload="metadata" style="width:100%;height:100%;object-fit:cover;" onloadedmetadata="this.currentTime=1;" onerror="this.style.display='none'; this.parentElement.querySelector('.video-play-btn').style.display='flex';"></video><div class="video-play-btn">▶</div></div><div class="project-overlay"><span class="project-overlay-tag">Click to Play</span></div></div><div class="project-info"><div class="project-type">Video Editing</div><div class="project-title">Medilink Promotional Video</div><div class="project-year">Portfolio 2023</div></div></div>
         </div>
-        </div>
     </section>
-//i edit
-     <section id="projects">
-        <div class="section-label">CERTIFICATES</div>
-        <h2 class="section-title reveal">Achievements and Certificates</h2>
-        <div class="projects-grid">
-            <div class="project-card reveal" onclick="openLightbox('SunMoon.png', 'Sun & Moon Illustration')"><div class="project-img"><img src="SunMoon.png" class="project-img-inner" onerror="this.style.background='linear-gradient(135deg, #2a1a3e, #1a2e3e)'; this.alt='🌙';"><div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div></div><div class="project-info"><div class="project-type">Illustration Design</div><div class="project-title">Sun & Moon Illustration</div><div class="project-year">Layout 2022</div></div></div>
-             <div class="project-card reveal" onclick="openLightbox('poster.jpg', 'Poultrymate Poster')"><div class="project-img"><img src="poster.jpg" class="project-img-inner" onerror="this.style.background='linear-gradient(135deg, #2a1a3e, #1a2e3e)'; this.alt='🌙';"><div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div></div><div class="project-info"><div class="project-type">Poster Design</div><div class="project-title">Poultrymate Manuscript Poster</div><div class="project-year">Layout 2022</div></div></div>
-            <div class="project-card reveal" onclick="openLightbox('Medilink.png', 'MediLink Advertisement')"><div class="project-img"><img src="Medilink.png" class="project-img-inner" onerror="this.alt='💊';"><div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div></div><div class="project-info"><div class="project-type">Poster Design</div><div class="project-title">MediLink Advertisement</div><div class="project-year">Layout 2024</div></div></div>
-            <div class="project-card reveal" onclick="openLightbox('Usermanual.png', 'PoultryMate User Manual')"><div class="project-img"><img src="Usermanual.png" class="project-img-inner" onerror="this.alt='📄';"><div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div></div><div class="project-info"><div class="project-type">Poster Design</div><div class="project-title">PoultryMate User Manual</div><div class="project-year">Layout 2025</div></div></div>
-            <div class="project-card reveal" onclick="openLightbox('Medilinklogo.png', 'MediLink Logo')"><div class="project-img"><img src="Medilinklogo.png" class="project-img-inner" onerror="this.alt='⚕️';"><div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div></div><div class="project-info"><div class="project-type">Logo Design</div><div class="project-title">MediLink Logo</div><div class="project-year">Layout 2024</div></div></div>
-            <div class="project-card reveal" onclick="openLightbox('VMJ.png', 'VMJ Global')"><div class="project-img"><img src="VMJ.png" class="project-img-inner" onerror="this.alt='VMJ';"><div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div></div><div class="project-info"><div class="project-type">Logo Design</div><div class="project-title">VMJ Global — Limitless Inside</div><div class="project-year">Layout 2024</div></div></div>
-            <div class="project-card reveal" onclick="openLightbox('Realitech.png', 'Realitech Logo')"><div class="project-img"><img src="Realitech.png" class="project-img-inner" onerror="this.alt='🤖';"><div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div></div><div class="project-info"><div class="project-type">Logo Design</div><div class="project-title">Realitech Logo</div><div class="project-year">Layout 2025</div></div></div>
-            <div class="project-card reveal" onclick="openLightbox('PoultrymateLogo.png', 'PoultryMate Logo')"><div class="project-img"><img src="PoultrymateLogo.png" class="project-img-inner" onerror="this.alt='🐣';"><div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div></div><div class="project-info"><div class="project-type">Logo Design</div><div class="project-title">PoultryMate Logo</div><div class="project-year">Layout 2025</div></div></div>
-            <div class="project-card reveal" onclick="openLightbox('Vido.mp4', 'Nearby Wokrs — Start Up Ad', true)"><div class="project-img"><div class="video-thumb-wrapper"><video src="Vido.mp4" muted preload="metadata" style="width:100%;height:100%;object-fit:cover;" onloadedmetadata="this.currentTime=1;" onerror="this.style.display='none'; this.parentElement.querySelector('.video-play-btn').style.display='flex';"></video><div class="video-play-btn">▶</div></div><div class="project-overlay"><span class="project-overlay-tag">Click to Play</span></div></div><div class="project-info"><div class="project-type">Video Editing</div><div class="project-title">Nearby Wokrs — Start Up Ad</div><div class="project-year">Portfolio 2024</div></div></div>
-             <div class="project-card reveal" onclick="openLightbox('Promvid.mp4', 'Medilink — Promotional Video', true)"><div class="project-img"><div class="video-thumb-wrapper"><video src="Promvid.mp4" muted preload="metadata" style="width:100%;height:100%;object-fit:cover;" onloadedmetadata="this.currentTime=1;" onerror="this.style.display='none'; this.parentElement.querySelector('.video-play-btn').style.display='flex';"></video><div class="video-play-btn">▶</div></div><div class="project-overlay"><span class="project-overlay-tag">Click to Play</span></div></div><div class="project-info"><div class="project-type">Video Editing</div><div class="project-title">Medilink Promotional Video</div><div class="project-year">Portfolio 2023</div></div></div>
+
+    <!-- CERTIFICATES SECTION (REPLACED WITH ACTUAL CERTIFICATE FILES) -->
+    <section id="certificates">
+    <div class="section-label">CERTIFICATES</div>
+    <h2 class="section-title reveal">Achievements and Certificates</h2>
+    <div class="projects-grid">
+        <!-- cert6.jpg -->
+        <div class="project-card reveal" onclick="handleCertificateClick('cert6.jpg', 'Certificate 6', false)">
+            <div class="project-img">
+                <img src="cert6.jpg" class="project-img-inner" onerror="this.style.background='linear-gradient(135deg, #2a1a3e, #1a2e3e)'; this.alt='📜';">
+                <div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div>
+            </div>
+            <div class="project-info">
+                <div class="project-type">Certificate</div>
+                <div class="project-title">Advance Seminar: The Power in Color Graphic Design: Theory, Psychology, and Practice</div>
+                <div class="project-year">Achievement</div>
+            </div>
         </div>
+
+        <!-- cert1.jpg -->
+        <div class="project-card reveal" onclick="handleCertificateClick('cert1.jpg', 'Certificate 1', false)">
+            <div class="project-img">
+                <img src="cert1.jpg" class="project-img-inner" onerror="this.style.background='linear-gradient(135deg, #2a1a3e, #1a2e3e)'; this.alt='📜';">
+                <div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div>
+            </div>
+            <div class="project-info">
+                <div class="project-type">Certificate</div>
+                <div class="project-title">Capstone Project Exhibit</div>
+                <div class="project-year">Achievement</div>
+            </div>
         </div>
-    </section>
+
+        <!-- cert2.jpg -->
+        <div class="project-card reveal" onclick="handleCertificateClick('cert2.jpg', 'Certificate 2', false)">
+            <div class="project-img">
+                <img src="cert2.jpg" class="project-img-inner" onerror="this.style.background='linear-gradient(135deg, #2a1a3e, #1a2e3e)'; this.alt='📜';">
+                <div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div>
+            </div>
+            <div class="project-info">
+                <div class="project-type">Certificate</div>
+                <div class="project-title">Start up Participation</div>
+                <div class="project-year">Achievement</div>
+            </div>
+        </div>
+
+        <!-- cert5.jpg -->
+        <div class="project-card reveal" onclick="handleCertificateClick('cert5.jpg', 'Certificate 5', false)">
+            <div class="project-img">
+                <img src="cert5.jpg" class="project-img-inner" onerror="this.style.background='linear-gradient(135deg, #2a1a3e, #1a2e3e)'; this.alt='📜';">
+                <div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div>
+            </div>
+            <div class="project-info">
+                <div class="project-type">Certificate</div>
+                <div class="project-title">Advance Seminar: Journey from Science Practinioner to Information Technology Specialist</div>
+                <div class="project-year">Achievement</div>
+            </div>
+        </div>
+
+        <!-- cert7.jpg -->
+        <div class="project-card reveal" onclick="handleCertificateClick('cert7.jpg', 'Certificate 7', false)">
+            <div class="project-img">
+                <img src="cert7.jpg" class="project-img-inner" onerror="this.style.background='linear-gradient(135deg, #2a1a3e, #1a2e3e)'; this.alt='📜';">
+                <div class="project-overlay"><span class="project-overlay-tag">Click to View</span></div>
+            </div>
+            <div class="project-info">
+                <div class="project-type">Certificate</div>
+                <div class="project-title">Certificate of tree planting</div>
+                <div class="project-year">Achievement</div>
+            </div>
+        </div>
+
+        <!-- cert3.pdf (PDF) -->
+        <div class="project-card reveal" onclick="handleCertificateClick('cert3.pdf', 'Certificate 3', true)">
+            <div class="project-img">
+                <div class="video-thumb-wrapper" style="background: linear-gradient(135deg, #1a2a3e, #2a1a3e);">
+                    <div style="font-size: 3rem;">📄</div>
+                    <div class="video-play-btn" style="background: rgba(217,79,213,0.7); font-size: 1rem; width: 50px; height: 50px;">PDF</div>
+                </div>
+                <div class="project-overlay"><span class="project-overlay-tag">Open PDF</span></div>
+            </div>
+            <div class="project-info">
+                <div class="project-type">Certificate (PDF)</div>
+                <div class="project-title">Certificate of Completion: CISCO - ETHICAL HACKER</div>
+                <div class="project-year">Achievement</div>
+            </div>
+        </div>
+
+        <!-- cert4.pdf (PDF) -->
+        <div class="project-card reveal" onclick="handleCertificateClick('cert4.pdf', 'Certificate 4', true)">
+            <div class="project-img">
+                <div class="video-thumb-wrapper" style="background: linear-gradient(135deg, #1a2a3e, #2a1a3e);">
+                    <div style="font-size: 3rem;">📄</div>
+                    <div class="video-play-btn" style="background: rgba(217,79,213,0.7); font-size: 1rem; width: 50px; height: 50px;">PDF</div>
+                </div>
+                <div class="project-overlay"><span class="project-overlay-tag">Open PDF</span></div>
+            </div>
+            <div class="project-info">
+                <div class="project-type">Certificate (PDF)</div>
+                <div class="project-title">Certificate of CISCO - CYBER SECURITY ESSENTIALS</div>
+                <div class="project-year">Achievement</div>
+            </div>
+        </div>
+
+        <!-- Certificate - Capstone.pdf (PDF) -->
+        <div class="project-card reveal" onclick="handleCertificateClick('Certificate - Capstone.pdf', 'Capstone Certificate', true)">
+            <div class="project-img">
+                <div class="video-thumb-wrapper" style="background: linear-gradient(135deg, #1a2a3e, #2a1a3e);">
+                    <div style="font-size: 3rem;">📄</div>
+                    <div class="video-play-btn" style="background: rgba(217,79,213,0.7); font-size: 1rem; width: 50px; height: 50px;">PDF</div>
+                </div>
+                <div class="project-overlay"><span class="project-overlay-tag">Open PDF</span></div>
+            </div>
+            <div class="project-info">
+                <div class="project-type">Certificate (PDF)</div>
+                <div class="project-title">Capstone Certificate of completion</div>
+                <div class="project-year">Achievement</div>
+            </div>
+        </div>
+
+        <!-- Cert of Completion.pdf (PDF) -->
+        <div class="project-card reveal" onclick="handleCertificateClick('MALING - CERTIFICATE.pdf', 'Certificate of Completion', true)">
+            <div class="project-img">
+                <div class="video-thumb-wrapper" style="background: linear-gradient(135deg, #1a2a3e, #2a1a3e);">
+                    <div style="font-size: 3rem;">📄</div>
+                    <div class="video-play-btn" style="background: rgba(217,79,213,0.7); font-size: 1rem; width: 50px; height: 50px;">PDF</div>
+                </div>
+                <div class="project-overlay"><span class="project-overlay-tag">Open PDF</span></div>
+            </div>
+            <div class="project-info">
+                <div class="project-type">Certificate (PDF)</div>
+                <div class="project-title">Certificate of Completion - OJT</div>
+                <div class="project-year">Achievement</div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <section id="contact">
         <div class="section-label">Get In Touch</div>
@@ -809,14 +931,11 @@
                 <p style="color: var(--muted); font-size: 0.95rem; max-width: 320px; margin: 0 auto 0.5rem;">
                     Click below to open a direct email draft in Gmail. Your message will come straight to my inbox.
                 </p>
-                <!-- UPDATED GMAIL DIRECT COMPOSE LINK -->
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=malingkenshie5@gmail.com&su=Hello%20Kenshie%20%E2%80%94%20Portfolio%20Inquiry&body=Hi%20Kenshie%2C%0D%0A%0D%0AI%20found%20your%20portfolio%20and%20I%20wanted%20to%20reach%20out%20about..." 
                    target="_blank" class="btn-email-direct" title="Open Gmail compose">
                     Email Me Directly
                 </a>
-                <p style="color: var(--muted); font-size: 0.7rem; margin-top: 1.2rem; letter-spacing: 0.05em;">
-                   
-                </p>
+                <p style="color: var(--muted); font-size: 0.7rem; margin-top: 1.2rem; letter-spacing: 0.05em;"></p>
             </div>
         </div>
     </section>
@@ -850,7 +969,13 @@
             mediaContainer = document.getElementById('lightbox-media-container'),
             lightboxCaption = document.getElementById('lightbox-caption');
 
+        // Open lightbox for images/videos, open PDFs in new tab
         function openLightbox(src, caption, isVideo = false) {
+            // If it's a PDF, handle separately (should not be called for PDFs, but safe)
+            if (src.toLowerCase().endsWith('.pdf')) {
+                window.open(src, '_blank');
+                return;
+            }
             mediaContainer.innerHTML = '';
             lightboxCaption.textContent = caption || '';
             if (isVideo || src.endsWith('.mp4') || src.endsWith('.webm') || src.endsWith('.mov')) {
@@ -883,6 +1008,15 @@
             }
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
+        }
+
+        // Handler for certificate clicks (PDFs open in new tab, images use lightbox)
+        function handleCertificateClick(file, title, isPdf) {
+            if (isPdf || file.toLowerCase().endsWith('.pdf')) {
+                window.open(file, '_blank');
+            } else {
+                openLightbox(file, title, false);
+            }
         }
 
         function closeLightbox() { lightbox.classList.remove('active');
