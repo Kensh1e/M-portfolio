@@ -1,4 +1,4 @@
-Here is the HTML document with a new "Prototypes" section added, featuring your Figma links as interactive cards.
+Here is the updated HTML document. The new "Prototypes" section now displays your Figma links without emojis, using clean typography and sleek card designs to keep the look polished and engaging.
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -790,17 +790,15 @@ Here is the HTML document with a new "Prototypes" section added, featuring your 
         </div>
     </section>
 
-    <!-- NEW PROTOTYPES SECTION: FIGMA LINKS -->
+    <!-- PROTOTYPES SECTION — no emojis, clean typographic style -->
     <section id="prototypes">
         <div class="section-label">Interactive Prototypes</div>
         <h2 class="section-title reveal">Figma Design Links</h2>
         <div class="projects-grid">
-            <!-- VENTURE Prototype -->
             <div class="project-card reveal" onclick="window.open('https://www.figma.com/design/SdJsL3gmz4HigzJyjRWZB8/VENTURE?node-id=0-1&p=f&t=XgMWSTXmfxRNy9HX-0', '_blank')">
                 <div class="project-img">
                     <div class="video-thumb-wrapper" style="background: linear-gradient(135deg, #1e1a3a, #1a2a3e);">
-                        <span style="font-size: 3rem;">🎯</span>
-                        <div class="video-play-btn" style="background: rgba(56,232,245,0.7); font-size: 0.9rem; width: 50px; height: 50px;">FIG</div>
+                        <div class="video-play-btn" style="background: rgba(56,232,245,0.7); font-size: 1.2rem; font-weight: bold; width: 56px; height: 56px; letter-spacing: 0.05em;">VENT</div>
                     </div>
                     <div class="project-overlay"><span class="project-overlay-tag">Launch Prototype</span></div>
                 </div>
@@ -810,12 +808,10 @@ Here is the HTML document with a new "Prototypes" section added, featuring your 
                     <div class="project-year">UX Research / 2025</div>
                 </div>
             </div>
-            <!-- HCI Pre-test Prototyping -->
             <div class="project-card reveal" onclick="window.open('https://www.figma.com/design/TCBngT0tZ8HdZGcx5soPB3/HCI_Pre-test-Prototyping?node-id=1-4&p=f&t=QR1UY9I67Dpbk1fo-0', '_blank')">
                 <div class="project-img">
                     <div class="video-thumb-wrapper" style="background: linear-gradient(135deg, #2a1a3e, #1e2a3e);">
-                        <span style="font-size: 3rem;">🧪</span>
-                        <div class="video-play-btn" style="background: rgba(217,79,213,0.7); font-size: 0.9rem; width: 50px; height: 50px;">HCI</div>
+                        <div class="video-play-btn" style="background: rgba(217,79,213,0.7); font-size: 1.2rem; font-weight: bold; width: 56px; height: 56px; letter-spacing: 0.05em;">HCI</div>
                     </div>
                     <div class="project-overlay"><span class="project-overlay-tag">Interactive Demo</span></div>
                 </div>
@@ -825,12 +821,10 @@ Here is the HTML document with a new "Prototypes" section added, featuring your 
                     <div class="project-year">Human-Computer Interaction / 2024</div>
                 </div>
             </div>
-            <!-- gClassroom Prototype -->
             <div class="project-card reveal" onclick="window.open('https://www.figma.com/design/OgH5deZf1I7jDuyQihCcJR/gClassroom-Protoype?node-id=0-1&p=f&t=NhyqDPwj0tXG966U-0', '_blank')">
                 <div class="project-img">
                     <div class="video-thumb-wrapper" style="background: linear-gradient(135deg, #1e2e3a, #2a1a3e);">
-                        <span style="font-size: 3rem;">📚</span>
-                        <div class="video-play-btn" style="background: rgba(56,232,245,0.7); font-size: 0.9rem; width: 50px; height: 50px;">gCLASS</div>
+                        <div class="video-play-btn" style="background: rgba(56,232,245,0.7); font-size: 1rem; font-weight: bold; width: 56px; height: 56px; letter-spacing: 0.05em;">gCLASS</div>
                     </div>
                     <div class="project-overlay"><span class="project-overlay-tag">Preview Design</span></div>
                 </div>
@@ -840,12 +834,10 @@ Here is the HTML document with a new "Prototypes" section added, featuring your 
                     <div class="project-year">EdTech / 2024</div>
                 </div>
             </div>
-            <!-- MAC_OfflineGPT -->
             <div class="project-card reveal" onclick="window.open('https://www.figma.com/design/0VwhFQlh69ojUcfOToWf3q/MAC_OfflineGPT?node-id=0-1&p=f&t=A8BvKthiYwzBt9Dq-0', '_blank')">
                 <div class="project-img">
                     <div class="video-thumb-wrapper" style="background: linear-gradient(135deg, #3e1a2e, #1e2a3a);">
-                        <span style="font-size: 3rem;">🤖</span>
-                        <div class="video-play-btn" style="background: rgba(217,79,213,0.7); font-size: 0.9rem; width: 50px; height: 50px;">AI</div>
+                        <div class="video-play-btn" style="background: rgba(217,79,213,0.7); font-size: 1rem; font-weight: bold; width: 56px; height: 56px; letter-spacing: 0.05em;">GPT</div>
                     </div>
                     <div class="project-overlay"><span class="project-overlay-tag">Open Figma</span></div>
                 </div>
@@ -883,7 +875,6 @@ Here is the HTML document with a new "Prototypes" section added, featuring your 
                    target="_blank" class="btn-email-direct" title="Open Gmail compose">
                     Email Me Directly
                 </a>
-                <p style="color: var(--muted); font-size: 0.7rem; margin-top: 1.2rem; letter-spacing: 0.05em;"></p>
             </div>
         </div>
     </section>
@@ -924,7 +915,6 @@ Here is the HTML document with a new "Prototypes" section added, featuring your 
                 nav.style.gap = '';
             }
         }
-        // reset menu on resize
         window.addEventListener('resize', () => {
             if (window.innerWidth > 900) {
                 const nav = document.getElementById('navLinks');
@@ -1015,7 +1005,6 @@ Here is the HTML document with a new "Prototypes" section added, featuring your 
         function closeLightboxOutside(e) { if (e.target === lightbox) closeLightbox(); }
         document.addEventListener('keydown', e => { if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox(); });
 
-        // liquid background script (condensed, same as original with minimal movement)
         (function() {
             const canvas = document.getElementById('liquid-canvas');
             if (!canvas) return;
@@ -1090,7 +1079,6 @@ Here is the HTML document with a new "Prototypes" section added, featuring your 
             resizeCanvas(); window.addEventListener('resize', resizeCanvas); animateLiquid();
         })();
 
-        // custom cursor
         (function() {
             const cursor = document.getElementById('custom-cursor');
             const trail = document.getElementById('cursor-trail');
